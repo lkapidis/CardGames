@@ -130,7 +130,7 @@ public class TexasGame implements GamesWithCards {
 		findWinner();
 	}
 	/**
-	 * Finds the winner of the round and pays him
+	 * Finds the winner of the round and pays him.
 	 */
 	public void findWinner(){
 		List<TexasPlayer> winner = new ArrayList<TexasPlayer>();
