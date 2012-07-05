@@ -7,16 +7,25 @@ package org.leonidas.CardGames;
  * 
  */
 public class Deck {
-
+	
+	private static Deck uniqueDeck = new Deck();
 	final int MAX_CARDS = 52;
 	private int cardsUsed = 0;
 	Card[] deck = new Card[MAX_CARDS];
 
 	/**
-	 * Constructor of deck creates and shuffles the deck. Deck is an array of 52
+	 * Following the singleton pattern for creation an unique deck
+	 * @return
+	 */
+	public static Deck getInstance(){
+		
+		return uniqueDeck;
+	}
+	/**
+	 * Constructor of deck creates a unique and shuffles the deck. Deck is an array of 52
 	 * defined from constant MAX_CARDS
 	 */
-	public Deck() {
+	private Deck() {
 		this.createDeck();
 		this.shuffleDeck();
 	}

@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class DealingPhase implements GamePhase {
 
-	Deck deck = new Deck();
+	Deck deck = Deck.getInstance();
 	List<TexasPlayer> players;
 	Dealing dealer = new DealOnePerTime(deck);
 	CardHolder tableHand;
