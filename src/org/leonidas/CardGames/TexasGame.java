@@ -62,7 +62,7 @@ public class TexasGame implements GamesWithCards {
 		gf.phase();
 		gf = new Turn(players, tableHand);
 		gf.phase();
-		gf = new Turn(players, tableHand);
+		gf = new River(players, tableHand);
 		gf.phase();
 		
 		/*
